@@ -34,7 +34,8 @@
 
 	.openMedia:hover {
 		opacity: 0.7;
-		font-style: bold
+		font-style: bold;
+		background-color: purple, 80%;
 		}
 
 /* style for div carrying media*/		
@@ -46,6 +47,7 @@
 		width: 100%; /* Full width */
 		height: 100%; /* Full height */
 		max-height: 180pt
+		
 		}
 
 /* style for div content (media) */
@@ -91,7 +93,7 @@
 
 <body>
 
-	<h2>Span Testing 1</h2>
+	<h2>Span Testing 2</h2>
 
 		<p>
 		This is to test my <a href="www.google.com">links</a>. <br>
@@ -109,10 +111,10 @@
 //summon Media1; show n hide
 	function showMedia1() {
 		var x = document.getElementById("Media1");
-		if (x.style.display === "none") {
-			x.style.display = "block";
-		} else {
+		if (x.style.display === "block") {
 			x.style.display = "none";
+		} else {
+			x.style.display = "block";
 		}
 	}</script>
 	</span>
@@ -127,10 +129,10 @@
 //summon Media1; show n hide
 	function showMedia2() {
 		var x = document.getElementById("Media2");
-		if (x.style.display === "none") {
-			x.style.display = "block";
-		} else {
+		if (x.style.display === "block") {
 			x.style.display = "none";
+		} else {
+			x.style.display = "block";
 		}
 	}</script>
 	</span><br>
