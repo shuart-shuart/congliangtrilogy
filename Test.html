@@ -3,12 +3,20 @@
 
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-		<style>
-		body {font-family: Courier New, Courier, sans-serif;}
+	<style>
+	body {
+		font-family: Courier New, Courier, sans-serif;
+		text-align: center
+	}
 
 		
 	a:hover {
-	  background-color: purple;
+		background-color: purple;
+		font-style: italic
+	}
+	
+	.a{
+		text-decoration: underline, dashed;
 	}
 
 	.openMedia{
@@ -113,14 +121,17 @@
 
 	<h2>Testing</h2>
 
-		<p>This is to test my <a href="www.google.com"> links </a>. </p>
-		<p>This is some other random text.</p>
+		<p>
+		This is to test my <a href="www.google.com">links</a>. <br>
+		This is some other random text. <br><br>
 
-		<p>This is to trigger Modal 1.</p>
+		This is to trigger <span id="Mod1" class="openMedia">Modal 1</span>. <br>
+		This is to trigger <span id="Mod2" class="openMedia">Modal 2</span>.
+		</p>
 
-		<p>This is to trigger Modal 2.</p>
 
-		<img id="myImg" src="https://img1.onthesnow.com/image/xl/88/snow_buried_timberline_lodge_sits_mt_88044.jpg" alt="Snow" style="width:100%;max-width:300px">
+		<img id="myImg" src="https://img1.onthesnow.com/image/xl/88/snow_buried_timberline_lodge_sits_mt_88044.jpg" alt="Snow" 
+		style="width:100%;max-width:300px" class="openMedia">
 
 <!-- The Modal -->
 	<div id="myModal" class="modal">
@@ -130,7 +141,6 @@
 	</div>
 
 	<script>
-
 // Get the modal
 		var modal = document.getElementById("myModal");
 
@@ -146,7 +156,6 @@
 
 // Get the <span> element that closes the modal
 		var span = document.getElementsByClassName("close")[0];
-
 // When the user clicks on <span> (x), close the modal
 		span.onclick = function() { 
 		  modal.style.display = "none";
