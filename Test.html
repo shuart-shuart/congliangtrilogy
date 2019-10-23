@@ -15,15 +15,11 @@
 		font-style: italic
 	}
 	
-	a:link {
+	a:link, .a {
 		color: white
 		background-color: black
-	}
-	
-	.a{
 		text-decoration: underline;
-		background-color: black
-	}
+			}
 
 	.openMedia{
 		  border-radius: 5px;
@@ -125,7 +121,7 @@
 
 <body>
 
-	<h2>Testing 2</h2>
+	<h2>Testing</h2>
 
 		<p>
 		This is to test my <a href="www.google.com">links</a>. <br>
@@ -146,22 +142,22 @@
 	  <span class="close">&times;</span>
 	  <img class="modal-content" id="img01">
 	  <div id="caption"></div>
-	</div>
 
-	<script>
-// Get the modal
-		var modal = document.getElementById("myModal");
+		<script>
+	// Get the modal
+			var modal = document.getElementById("myModal");
 		
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-		var img = document.getElementById("myImg");
-		var modalImg = document.getElementById("img01");
-		var captionText = document.getElementById("caption");
-		img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-		}
-	</script>
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var img = document.getElementById("myImg");
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function(){
+			  modal.style.display = "block";
+			  modalImg.src = this.src;
+			  captionText.innerHTML = this.alt;
+			}
+		</script>
+	</div>
 	
 <!-- Modal 1 -->
 	<div id="Mod1" class="modal">
@@ -169,22 +165,22 @@
 	  <img class="modal-content" id="img01"> 
 	  <p> Modal 1 </p>
 	  <div id="caption"></div>
-	</div>
 	
-	<script>
-// Get the modal
-		var modal = document.getElementbyId("Mod1");
+		<script>
+	// Get the modal
+			var modal = document.getElementbyId("Mod1");
 		
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-		var img = document.getElementById("myImg");
-		var modalImg = document.getElementById("img01");
-		var captionText = document.getElementById("caption");
-		img.onclick = function(){
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-		}
-	</script>
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var img = document.getElementById("myImg");
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function(){
+			  modal.style.display = "block";
+			  modalImg.src = this.src;
+			  captionText.innerHTML = this.alt;
+			}
+		</script>
+	</div>
 	
 	<script>
 // Get the <span> element that closes the modal; CAN STAY; if don't work anymore can try as class then put in head
