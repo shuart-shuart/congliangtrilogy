@@ -17,6 +17,7 @@
 	
 	a:link {
 		color: white
+		background-color: black
 	}
 	
 	.a{
@@ -131,9 +132,11 @@
 		This is some other random text. <br><br>
 
 		This is to trigger <span id="Mod1" class="openMedia">Modal 1</span>. <br>
-		This is to trigger <span id="Mod2" class="openMedia">Modal 2</span>.
+		This is to trigger <span id="Mod2" class="openMedia">Modal 2</span>. <br><br>
+		
+		This is to trigger <span id="Mod1" class="openMedia">Span 1</span>. <br>
+		This is to trigger <span id="Mod2" class="openMedia">Span 2</span>.
 		</p>
-
 
 		<img id="myImg" src="https://img1.onthesnow.com/image/xl/88/snow_buried_timberline_lodge_sits_mt_88044.jpg" alt="Snow" 
 		style="width:100%;max-width:300px" class="openMedia">
@@ -142,14 +145,6 @@
 	<div id="myModal" class="modal">
 	  <span class="close">&times;</span>
 	  <img class="modal-content" id="img01">
-	  <div id="caption"></div>
-	</div>
-	
-<!-- Modal 1 -->
-	<div id="Mod1" class="modal">
-	  <span class="close">&times;</span>
-	  <img class="modal-content" id="img01"> 
-	  <p> Modal 1 </p>
 	  <div id="caption"></div>
 	</div>
 
@@ -166,10 +161,35 @@
 		  modalImg.src = this.src;
 		  captionText.innerHTML = this.alt;
 		}
-
-// Get the <span> element that closes the modal
+	</script>
+	
+<!-- Modal 1 -->
+	<div id="Mod1" class="modal">
+	  <span class="close">&times;</span>
+	  <img class="modal-content" id="img01"> 
+	  <p> Modal 1 </p>
+	  <div id="caption"></div>
+	</div>
+	
+	<script>
+// Get the modal
+		var modal = document.getElementbyId("Mod1");
+		
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+		var img = document.getElementById("myImg");
+		var modalImg = document.getElementById("img01");
+		var captionText = document.getElementById("caption");
+		img.onclick = function(){
+		  modal.style.display = "block";
+		  modalImg.src = this.src;
+		  captionText.innerHTML = this.alt;
+		}
+	</script>
+	
+	<script>
+// Get the <span> element that closes the modal; CAN STAY; if don't work anymore can try as class then put in head
 		var span = document.getElementsByClassName("close")[0];
-// When the user clicks on <span> (x), close the modal
+// When the user clicks on <span> (x), close the modal; CAN STAY
 		span.onclick = function() { 
 		  modal.style.display = "none";
 		}
