@@ -41,6 +41,8 @@
 		width: 100%; /* Full width */
 		height: 100%; /* Full height */
 		max-height: 180pt
+		text-decoration-style: dashed;
+		text-decoration: underline;
 		}
 
 /* style for span content (media) */
@@ -86,7 +88,7 @@
 
 <body>
 
-	<h2>Span Testing</h2>
+	<h2>Span Testing 2</h2>
 
 		<p>
 		This is to test my <a href="www.google.com">links</a>. <br>
@@ -121,6 +123,21 @@
 			y.style.display = "block";
 		} else {
 			y.style.display = "none";
+		}
+	}</script>
+	
+		This is to trigger <span onlick="showMedia3()" id="Span3" class="openMedia">Span 3</span>.
+			<div id="Media3" class="myMedia">
+			<p class="myMedia-content"> |media 3|</p>
+				<div class=myMedia-caption>This is the third caption.</div>
+			</div>
+		<script>
+	function showMedia3() {
+		var z = document.getElementById("Media3");
+		if (z.style.display === "block") {
+			z.style.display = "none";
+		} else {
+			z.style.display = "none";
 		}
 	}</script>
 		</p>
