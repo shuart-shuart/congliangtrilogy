@@ -34,6 +34,7 @@
 
 /* style for span carrying media*/		
 	.myMedia {
+		/* display: none; /* Hidden by default */
 		left: 0;
 		top: 0;
 		padding: 20pt /*gap from text and other elements*/
@@ -56,11 +57,10 @@
 		  display: block;
 		  text-align: center;
 		  width: 80%;
-		  max-width: 700px;
-		  text-align: center;
-		  color: #ccc;
+		  max-width: 300px;
+		  color: red;
 		  padding: 10px 0;
-		  height: 150px;
+		  height: 50px;
 		}
 
 /* Add Animation */
@@ -86,19 +86,19 @@
 
 <body>
 
-	<h2>Span Testing</h2>
+	<h2>Span Testing 2</h2>
 
 		<p>
 		This is to test my <a href="www.google.com">links</a>. <br>
 		This is some other random text. <br><br>
 	
-		This is to trigger <span onclick="showMedia()" id="Span1" class="openMedia">Span 1</span>. <br>
+		This is to trigger <span onclick="showMedia(Span1)" id="Span1" class="openMedia">Span 1</span>. <br>
 			<div id="Media1" class="myMedia">
 			<img id="img1" class="myMedia-content"
 			src="https://img1.onthesnow.com/image/xl/88/snow_buried_timberline_lodge_sits_mt_88044.jpg" alt="Snow">
 				<div class=myMedia-caption>This is the caption.</div>
 			</div>
-		This is to trigger <span onlick="showMedia()" id="Span2" class="openMedia">Span 2</span>.
+		This is to trigger <span onlick="showMedia(Span2)" id="Span2" class="openMedia">Span 2</span>.
 			<div id="Media2" class="myMedia">
 			<p>media 2</p>
 			</div>
@@ -106,7 +106,7 @@
 		
 		<script>
 //summon Media1; show n hide
-	function showMedia() {
+	function showMedia(Span1) {
 		var Span1 = document.getElementById("Media1")
 		if (Span1.style.display === "none") {
 			Span1.style.display = "block";
@@ -114,16 +114,14 @@
 		else {
 			Span1.style.display = "none";
 			}
-		}</script>
-	
-		<script>
-	function showMedia() {			
+	function showMedia(Span2) {		
 		var Span2 = document.getElementById("Media2");
 		  if (Span2.style.display === "none") {
 			Span2.style.display = "block";
 		  } else {
 			Span2.style.display = "none";
 		  }
+		
 		}</script>
 
 <!--
