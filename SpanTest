@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	body {
+		font-family: Courier New, Courier, sans-serif;
+		text-align: center
+	}
+	
+/*hyperlinks style*/
+	a:hover {
+		background-color: purple;
+		font-style: italic
+	}
+	
+	a:link, .a {
+		color: white
+		background-color: black /*not working*/
+		text-decoration: underline;
+			}
+
+/* text style for opening media*/
+	.openMedia{
+		  cursor: crosshair;
+		  transition: 0.3s;
+		}
+
+	.openMedia:hover {
+		opacity: 0.7;
+		font-style: bold
+		}
+
+/* style for span carrying media*/		
+	.myMedia {
+		display: none; /* Hidden by default */
+		left: 0;
+		top: 0;
+		padding: 20pt /*gap from text and other elements*/
+		width: 100%; /* Full width */
+		height: 100%; /* Full height */
+		max-height: 200pt
+		}
+
+/* style for span content (media) */
+	.myMedia-content {
+		margin: auto;
+		display: block;
+		width: 80%;
+		max-width: 700px;
+		}
+
+/* style for span caption */
+	.myMedia-caption {
+		  margin: auto;
+		  display: block;
+		  width: 80%;
+		  max-width: 700px;
+		  text-align: center;
+		  color: #ccc;
+		  padding: 10px 0;
+		  height: 150px;
+		}
+
+/* Add Animation */
+		.myMedia-content, .myMedia-caption {  
+		  -webkit-animation-name: zoom;
+		  -webkit-animation-duration: 0.6s;
+		  animation-name: zoom;
+		  animation-duration: 0.6s;
+		}
+
+		@-webkit-keyframes zoom {
+		  from {-webkit-transform:scale(0)} 
+		  to {-webkit-transform:scale(1)}
+		}
+
+		@keyframes zoom {
+		  from {transform:scale(0)} 
+		  to {transform:scale(1)}
+		}
+
+/* The Close Button */ /* NON EXSISTENT RNOW*/
+		.close {
+		  position: absolute;
+		  top: 15px;
+		  right: 35px;
+		  color: #f1f1f1;
+		  font-size: 40px;
+		  font-weight: bold;
+		  transition: 0.3s;
+		}
+
+		.close:hover, .close:focus {
+		  color: #bbb;
+		  text-decoration: none;
+		  cursor: pointer;
+		}
+
+	}</style>
+</head>
+
+<body>
+
+	<h2>Span Testing</h2>
+
+		<p>
+		This is to test my <a href="www.google.com">links</a>. <br>
+		This is some other random text. <br><br>
+	
+		This is to trigger <span id="Span1" class="openMedia">Span 1</span>. <br>
+			<span id="Media1" class="myMedia">
+			<img id="img1" class="myMedia-content"
+			src="https://img1.onthesnow.com/image/xl/88/snow_buried_timberline_lodge_sits_mt_88044.jpg" alt="Snow">
+			</span>
+		This is to trigger <span id="Mod2" class="openMedia">Span 2</span>.
+		</p>
+		
+		<script>
+//summon Media1
+			var Span1 = document.getElementById("Media1")
+//haven't figure out how to close
+		</script>
+
+</body>
+</html>
