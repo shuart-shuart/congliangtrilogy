@@ -16,9 +16,11 @@
 		color: white;
 	}
 	
-	a:link, .a {
+	a:link{
+		color: pink
+			}
+	.a {
 		color: white
-		background-color: black /*not working*/
 		text-decoration: underline;
 			}
 
@@ -89,33 +91,22 @@
 
 <body>
 
-	<h2>Span Testing</h2>
+	<h2>Span Testing 2</h2>
 
 		<p>
 		This is to test my <a href="www.google.com">links</a>. <br>
 <!-- figure out how to dash the link and text coloring-->
 		This is some other random text. <br><br>
 	
+	<span>
 		This is to trigger <span onclick="showMedia1()" id="Span1" class="openMedia">Span 1</span>. <br>
 			<div id="Media1" class="myMedia">
 			<img id="img1" class="myMedia-content"
 			src="https://img1.onthesnow.com/image/xl/88/snow_buried_timberline_lodge_sits_mt_88044.jpg" alt="Snow">
 				<div class=myMedia-caption>This is the caption.</div>
 			</div>
-		
-		This is to trigger <span onclick="showMedia2()" id="Span2" class="openMedia">Span 2</span>.
-			<div id="Media2" class="myMedia">
-			<p class="myMedia-content"> |media 2|</p>
-				<div class=myMedia-caption>This is the second caption.</div>
-			</div>
-			
-		This is to trigger <span onclick="showMedia3()" id="Span3" class="openMedia">Span 3</span>.
-			<div id="Media3" class="myMedia">
-			<p class="myMedia-content"> |media 3|</p>
-				<div class=myMedia-caption>This is the third caption.</div>
-			</div>
 		<script>
-//summon Media; show n hide
+//summon Media1; show n hide
 	function showMedia1() {
 		var x = document.getElementById("Media1");
 		if (x.style.display === "none") {
@@ -123,25 +114,65 @@
 		} else {
 			x.style.display = "none";
 		}
-		
+	}</script>
+	</span>
+
+	<span>	
+		This is to trigger <span onclick="showMedia2()" id="Span2" class="openMedia">Span 2</span>.
+			<div id="Media2" class="myMedia">
+			<p class="myMedia-content"> |media 2|</p>
+				<div class=myMedia-caption>This is the second caption.</div>
+			</div>
+		<script>
+//summon Media1; show n hide
 	function showMedia2() {
-		var y = document.getElementById("Media2");
-		if (y.style.display === "none") {
-			y.style.display = "block";
+		var x = document.getElementById("Media2");
+		if (x.style.display === "none") {
+			x.style.display = "block";
 		} else {
-			y.style.display = "none";
+			x.style.display = "none";
 		}
-		
+	}</script>
+	</span><br>
+	
+	<span>
+		This is to trigger <span onclick="showMedia3()" id="Span3" class="openMedia">Span 3</span>.
+			<div id="Media3" class="myMedia">
+			<p class="myMedia-content"> |media 3|</p>
+				<div class=myMedia-caption>This is the third caption.</div>
+			</div>
+		<script>
+//summon Media1; show n hide
 	function showMedia3() {
-		var z = document.getElementById("Media3");
-		if (z.style.display === "block") {
-			z.style.display = "none";
+		var x = document.getElementById("Media3");
+		if (x.style.display === "block") {
+			x.style.display = "none";
 		} else {
-			z.style.display = "block";
+			x.style.display = "block";
 		}
 	}</script>
 	</span>
 		</p>
+		
+<!--
+		<span onclick="myFunction()">Try it</span>
+
+		<div id="myDIV">
+		This is my DIV element.
+		</div>
+
+		<p><b>Note:</b> The element will not take up any space when the display property set to "none".</p>
+
+		<script>
+		function myFunction() {
+		  var x = document.getElementById("myDIV");
+		  if (x.style.display === "none") {
+			x.style.display = "block";
+		  } else {
+			x.style.display = "none";
+		  }
+		}
+		</script>
 -->
 
 </body>
