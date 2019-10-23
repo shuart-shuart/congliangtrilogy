@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	body {
+		font-family: Courier New, Courier, sans-serif;
+		text-align: center
+	}
+	
+/*hyperlinks style*/
+	.a {
+		color: pink;
+		text-decoration-line: underline;
+		text-decoration-style: dashed;
+		font-weight: 500;
+		background-color: black, 0.8;
+		}
+
+	a:link {
+		background-color: black;
+		}
+	
+	a:hover {
+		opacity: 0.7;
+		font-style: italic;
+		}
+	
+/* text style for opening media*/
+	.openMedia {
+		  cursor: crosshair;
+		  transition: 0.3s;
+		  text-decoration-line: underline;
+		  text-decoration-style: dashed;
+		  font-weight: 500;
+		  background-color: pink
+		}
+
+	.openMedia:hover {
+		opacity: 0.7;
+		font-style: italic;
+		}
+
+/* style for div carrying media*/		
+	.myMedia {
+		display: none; /* Hidden by default */
+		left: 0;
+		top: 0;
+		padding: 10pt /*gap from text and other elements*/
+		width: 100%; /* Full width */
+		height: 100%; /* Full height */
+		max-height: 180pt
+		}
+
+/* style for div content (media) */
+	.myMedia-content {
+		margin: auto;
+		display: block;
+		width: 80%;
+		max-width: 300px;
+		}
+
+/* style for div caption */
+	.myMedia-caption {
+		  margin: auto;
+		  display: block;
+		  text-align: center;
+		  width: 80%;
+		  max-width: 300px;
+		  color: red;
+		  padding: 10px 0;
+		  height: 50px;
+		}
+
+/* Add Animation */
+		.myMedia-content, .myMedia-caption {  
+		  -webkit-animation-name: zoom;
+		  -webkit-animation-duration: 0.6s;
+		  animation-name: zoom;
+		  animation-duration: 0.6s;
+		}
+
+		@-webkit-keyframes zoom {
+		  from {-webkit-transform:scale(0)} 
+		  to {-webkit-transform:scale(1)}
+		}
+
+		@keyframes zoom {
+		  from {transform:scale(0)} 
+		  to {transform:scale(1)}
+		}
+
+	}</style>
+</head>
+
+<body>
+
+	<h2>Span Testing</h2>
+
+	<p>
+		This is to test my <a href="www.google.com">links</a>. <br>
+<!-- figure out how to dash the link and text coloring-->
+		This is some other random text. <br><br>
+	
+	<span>
+		This is to trigger <span onclick="showMedia1()" id="Span1" class="openMedia">Span 1</span>. <br>
+			<div id="Media1" class="myMedia">
+			<img id="img1" class="myMedia-content"
+			src="https://img1.onthesnow.com/image/xl/88/snow_buried_timberline_lodge_sits_mt_88044.jpg" alt="Snow">
+				<div class=myMedia-caption>This is the caption.</div>
+			</div>
+		<script>
+//summon Media1; show n hide
+	function showMedia1() {
+		var x = document.getElementById("Media1");
+		if (x.style.display === "block") {
+			x.style.display = "none";
+		} else {
+			x.style.display = "block";
+		}
+	}</script>
+	</span>
+
+	<span>	
+		This is to trigger <span onclick="showMedia2()" id="Span2" class="openMedia">Span 2</span>.
+			<div id="Media2" class="myMedia">
+			<p class="myMedia-content"> |media 2|</p>
+				<div class=myMedia-caption>This is the second caption.</div>
+			</div>
+		<script>
+//summon Media1; show n hide
+	function showMedia2() {
+		var x = document.getElementById("Media2");
+		if (x.style.display === "block") {
+			x.style.display = "none";
+		} else {
+			x.style.display = "block";
+		}
+	}</script>
+	</span>
+	
+	<span>
+		This is to trigger <span onclick="showMedia3()" id="Span3" class="openMedia">Span 3</span>.
+			<div id="Media3" class="myMedia">
+			<p class="myMedia-content"> |media 3|</p>
+				<div class=myMedia-caption>This is the third caption.</div>
+			</div>
+		<script>
+//summon Media1; show n hide
+	function showMedia3() {
+		var x = document.getElementById("Media3");
+		if (x.style.display === "block") {
+			x.style.display = "none";
+		} else {
+			x.style.display = "block";
+		}
+	}</script>
+	</span>
+	</p>
+		
+</body>
+</html>
