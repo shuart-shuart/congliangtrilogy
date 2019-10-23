@@ -8,20 +8,22 @@
 		font-family: Courier New, Courier, sans-serif;
 		text-align: center
 	}
+
+		
 	a:hover {
 		background-color: purple;
 		font-style: italic
-		color: grey
 	}
+	
 	a:link {
 		color: white
 	}
 	
 	.a{
 		text-decoration: underline;
-		text-decoration-style: dashed;
+		background-color: black
 	}
-		
+
 	.openMedia{
 		  border-radius: 5px;
 		  cursor: crosshair;
@@ -30,7 +32,7 @@
 
 	.openMedia:hover {opacity: 0.7;}
 
-		#myImg1 {
+		#myImg {
 		  border-radius: 5px;
 		  cursor: pointer;
 		  transition: 0.3s;
@@ -140,6 +142,14 @@
 	<div id="myModal" class="modal">
 	  <span class="close">&times;</span>
 	  <img class="modal-content" id="img01">
+	  <div id="caption"></div>
+	</div>
+	
+<!-- Modal 1 -->
+	<div id="Mod1" class="modal">
+	  <span class="close">&times;</span>
+	  <img class="modal-content" id="img01"> 
+	  <p> Modal 1 </p>
 	  <div id="caption"></div>
 	</div>
 
