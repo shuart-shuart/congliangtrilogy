@@ -13,6 +13,7 @@
 	a:hover {
 		background-color: purple;
 		font-style: italic
+		color: white;
 	}
 	
 	a:link, .a {
@@ -26,6 +27,7 @@
 		  cursor: crosshair;
 		  transition: 0.3s;
 		  text-decoration: underline;
+		  font-style: bold;
 		}
 
 	.openMedia:hover {
@@ -87,10 +89,11 @@
 
 <body>
 
-	<h2>Span Testing 2</h2>
+	<h2>Span Testing</h2>
 
 		<p>
 		This is to test my <a href="www.google.com">links</a>. <br>
+<!-- figure out how to dash the link and text coloring-->
 		This is some other random text. <br><br>
 	
 	<span>
@@ -113,15 +116,15 @@
 	</span>
 
 	<span>	
-		This is to trigger <span onlick="showMedia1()" id="Span2" class="openMedia">Span 2</span>.
+		This is to trigger <span onclick="showMedia2()" id="Span2" class="openMedia">Span 2</span>.
 			<div id="Media2" class="myMedia">
 			<p class="myMedia-content"> |media 2|</p>
 				<div class=myMedia-caption>This is the second caption.</div>
 			</div>
 		<script>
 //summon Media1; show n hide
-	function showMedia1() {
-		var x = document.getElementById("Media1");
+	function showMedia2() {
+		var x = document.getElementById("Media2");
 		if (x.style.display === "none") {
 			x.style.display = "block";
 		} else {
@@ -131,15 +134,15 @@
 	</span>
 	
 	<span>
-		This is to trigger <span onlick="showMedia1()" id="Span3" class="openMedia">Span 3</span>.
+		This is to trigger <span onclick="showMedia3()" id="Span3" class="openMedia">Span 3</span>.
 			<div id="Media3" class="myMedia">
 			<p class="myMedia-content"> |media 3|</p>
 				<div class=myMedia-caption>This is the third caption.</div>
 			</div>
 		<script>
 //summon Media1; show n hide
-	function showMedia1() {
-		var x = document.getElementById("Media1");
+	function showMedia3() {
+		var x = document.getElementById("Media3");
 		if (x.style.display === "block") {
 			x.style.display = "none";
 		} else {
