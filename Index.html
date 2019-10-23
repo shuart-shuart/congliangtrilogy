@@ -25,6 +25,7 @@
 	.openMedia{
 		  cursor: crosshair;
 		  transition: 0.3s;
+		  text-decoration: underline;
 		}
 
 	.openMedia:hover {
@@ -32,7 +33,7 @@
 		font-style: bold
 		}
 
-/* style for span carrying media*/		
+/* style for div carrying media*/		
 	.myMedia {
 		/* display: none; /* Hidden by default */
 		left: 0;
@@ -41,11 +42,9 @@
 		width: 100%; /* Full width */
 		height: 100%; /* Full height */
 		max-height: 180pt
-		text-decoration-style: dashed;
-		text-decoration: underline;
 		}
 
-/* style for span content (media) */
+/* style for div content (media) */
 	.myMedia-content {
 		margin: auto;
 		display: block;
@@ -53,7 +52,7 @@
 		max-width: 300px;
 		}
 
-/* style for span caption */
+/* style for div caption */
 	.myMedia-caption {
 		  margin: auto;
 		  display: block;
@@ -88,12 +87,13 @@
 
 <body>
 
-	<h2>Span Testing 2</h2>
+	<h2>Span Testing</h2>
 
 		<p>
 		This is to test my <a href="www.google.com">links</a>. <br>
 		This is some other random text. <br><br>
 	
+	<span>
 		This is to trigger <span onclick="showMedia1()" id="Span1" class="openMedia">Span 1</span>. <br>
 			<div id="Media1" class="myMedia">
 			<img id="img1" class="myMedia-content"
@@ -110,7 +110,9 @@
 			x.style.display = "none";
 		}
 	}</script>
-	
+	</span>
+
+	<span>	
 		This is to trigger <span onlick="showMedia2()" id="Span2" class="openMedia">Span 2</span>.
 			<div id="Media2" class="myMedia">
 			<p class="myMedia-content"> |media 2|</p>
@@ -125,7 +127,9 @@
 			y.style.display = "none";
 		}
 	}</script>
+	</span>
 	
+	<span>
 		This is to trigger <span onlick="showMedia3()" id="Span3" class="openMedia">Span 3</span>.
 			<div id="Media3" class="myMedia">
 			<p class="myMedia-content"> |media 3|</p>
@@ -140,6 +144,7 @@
 			z.style.display = "none";
 		}
 	}</script>
+	</span>
 		</p>
 		
 <!--
