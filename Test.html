@@ -121,7 +121,7 @@
 
 <body>
 
-	<h2>Testing</h2>
+	<h2>Testing 2</h2>
 
 		<p>
 		This is to test my <a href="www.google.com">links</a>. <br>
@@ -139,13 +139,13 @@
 
 <!-- The Modal -->
 	<div id="myModal" class="modal">
-	  <span class="close">&times;</span>
+	  <span id="closemod" class="close">&times;</span>
 	  <img class="modal-content" id="img01">
 	  <div id="caption"></div>
 
 		<script>
 	// Get the modal
-			var modal = document.getElementById("myModal");
+			var myModal = document.getElementById("myModal");
 		
 	// Get the image and insert it inside the modal - use its "alt" text as a caption
 			var img = document.getElementById("myImg");
@@ -161,14 +161,14 @@
 	
 <!-- Modal 1 -->
 	<div id="Mod1" class="modal">
-	  <span class="close">&times;</span>
+	  <span id="closemod" class="close">&times;</span>
 	  <img class="modal-content" id="img01"> 
 	  <p> Modal 1 </p>
 	  <div id="caption"></div>
 	
 		<script>
 	// Get the modal
-			var modal = document.getElementbyId("Mod1");
+			var Mod1 = document.getElementbyId("Mod1");
 		
 	// Get the image and insert it inside the modal - use its "alt" text as a caption
 			var img = document.getElementById("myImg");
@@ -184,9 +184,9 @@
 	
 	<script>
 // Get the <span> element that closes the modal; CAN STAY; if don't work anymore can try as class then put in head
-		var span = document.getElementsByClassName("close")[0];
+		var closemod = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal; CAN STAY
-		span.onclick = function() { 
+		closemod.onclick = function() { 
 		  modal.style.display = "none";
 		}
 	</script>
