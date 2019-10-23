@@ -86,7 +86,7 @@
 
 <body>
 
-	<h2>Span Testing</h2>
+	<h2>Span Testing 2</h2>
 
 		<p>
 		This is to test my <a href="www.google.com">links</a>. <br>
@@ -98,7 +98,10 @@
 			src="https://img1.onthesnow.com/image/xl/88/snow_buried_timberline_lodge_sits_mt_88044.jpg" alt="Snow">
 				<div class=myMedia-caption>This is the caption.</div>
 			</div>
-		This is to trigger <span id="Mod2" class="openMedia">Span 2</span>.
+		This is to trigger <span onlick="showMedia()" id="Span2" class="openMedia">Span 2</span>.
+			<div id="Media2" class="myMedia">
+			<p>media 2</p>
+			</div>
 		</p>
 		
 		<script>
@@ -111,6 +114,14 @@
 		else {
 			Span1.style.display = "none";
 			}
+			
+		var Span2 = document.getElementById("Media2");
+		  if (Span2.style.display === "none") {
+			Span2.style.display = "block";
+		  } else {
+			Span2.style.display = "none";
+		  }
+		
 		}</script>
 
 <!--
