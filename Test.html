@@ -34,6 +34,15 @@
 		  cursor: pointer;
 		  transition: 0.3s;
 		}
+		
+		.myMedia {
+			display: none; /* Hidden by default */
+			left: 0;
+			top: 0;
+			width: 100%; /* Full width */
+			height: 100%; /* Full height */
+			max-height: 150pt
+		}
 
 /* unchanged START*/
 
@@ -121,7 +130,7 @@
 
 <body>
 
-	<h2>Testing 2</h2>
+	<h2>Testing</h2>
 
 		<p>
 		This is to test my <a href="www.google.com">links</a>. <br>
@@ -129,23 +138,34 @@
 
 		This is to trigger <span id="Mod1" class="openMedia">Modal 1</span>. <br>
 		This is to trigger <span id="Mod2" class="openMedia">Modal 2</span>. <br><br>
-		
-		This is to trigger <span id="Mod1" class="openMedia">Span 1</span>. <br>
+<!-- not testing modal for now -->
+	
+		This is to trigger <span id="Span1" class="openMedia">Span 1</span>. <br>
+			<span class="myMedia">
+			<img id="Media1" 
+			src="https://img1.onthesnow.com/image/xl/88/snow_buried_timberline_lodge_sits_mt_88044.jpg" alt="Snow" 
+			style="width:100%;max-width:300px">
+			</span>
 		This is to trigger <span id="Mod2" class="openMedia">Span 2</span>.
 		</p>
+		
+		<script>
+//summon Media1
+			var Span1 = onclick.getElementById("Media1")
+		</script>
 
 		<img id="myImg" src="https://img1.onthesnow.com/image/xl/88/snow_buried_timberline_lodge_sits_mt_88044.jpg" alt="Snow" 
 		style="width:100%;max-width:300px" class="openMedia">
 
 <!-- The Modal -->
 	<div id="myModal" class="modal">
-	  <span id="closemod" class="close">&times;</span>
+	  <span class="close">&times;</span>
 	  <img class="modal-content" id="img01">
 	  <div id="caption"></div>
 
 		<script>
 	// Get the modal
-			var myModal = document.getElementById("myModal");
+			var modal = document.getElementById("myModal");
 		
 	// Get the image and insert it inside the modal - use its "alt" text as a caption
 			var img = document.getElementById("myImg");
@@ -156,40 +176,13 @@
 			  modalImg.src = this.src;
 			  captionText.innerHTML = this.alt;
 			}
-		</script>
-	</div>
-	
-<!-- Modal 1 -->
-	<div id="Mod1" class="modal">
-	  <span id="closemod" class="close">&times;</span>
-	  <img class="modal-content" id="img01"> 
-	  <p> Modal 1 </p>
-	  <div id="caption"></div>
-	
-		<script>
-	// Get the modal
-			var Mod1 = document.getElementbyId("Mod1");
-		
-	// Get the image and insert it inside the modal - use its "alt" text as a caption
-			var img = document.getElementById("myImg");
-			var modalImg = document.getElementById("img01");
-			var captionText = document.getElementById("caption");
-			img.onclick = function(){
-			  modal.style.display = "block";
-			  modalImg.src = this.src;
-			  captionText.innerHTML = this.alt;
-			}
-		</script>
-	</div>
-	
-	<script>
-// Get the <span> element that closes the modal; CAN STAY; if don't work anymore can try as class then put in head
-		var closemod = document.getElementsByClassName("close")[0];
-// When the user clicks on <span> (x), close the modal; CAN STAY
-		closemod.onclick = function() { 
+	// Get the <span> element that closes the modal; CAN STAY; if don't work anymore can try as class then put in head
+		var span = document.getElementsByClassName("close")[0];
+	// When the user clicks on <span> (x), close the modal; CAN STAY
+		span.onclick = function() { 
 		  modal.style.display = "none";
-		}
-	</script>
-
+		}</script>
+	</div>
+	
 </body>
 </html>
