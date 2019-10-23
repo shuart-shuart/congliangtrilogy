@@ -12,30 +12,31 @@
 /*hyperlinks style*/
 	a:hover {
 		background-color: purple;
-		font-style: italic, dashed;
+		font-style: italic;
 		color: white;
-	}
+		}
 	
 	a:link {
 		color: pink
-			}
+		}
+	
 	.a {
 		color: white;
 		text-decoration: underline;
-			}
+		}
 
 /* text style for opening media*/
 	.openMedia {
 		  cursor: crosshair;
 		  transition: 0.3s;
-		  text-decoration: underline;
+		  text-decoration: underline, dashed;
 		  font-style: bold;
+		  background-color: pink
 		}
 
 	.openMedia:hover {
 		opacity: 0.7;
-		font-style: bold;
-		background-color: purple, 80%;
+		background-color: purple;
 		}
 
 /* style for div carrying media*/		
@@ -47,7 +48,6 @@
 		width: 100%; /* Full width */
 		height: 100%; /* Full height */
 		max-height: 180pt
-		
 		}
 
 /* style for div content (media) */
@@ -95,7 +95,7 @@
 
 	<h2>Span Testing</h2>
 
-		<p>
+	<p>
 		This is to test my <a href="www.google.com">links</a>. <br>
 <!-- figure out how to dash the link and text coloring-->
 		This is some other random text. <br><br>
@@ -135,7 +135,7 @@
 			x.style.display = "block";
 		}
 	}</script>
-	</span> <br><br>
+	</span>
 	
 	<span>
 		This is to trigger <span onclick="showMedia3()" id="Span3" class="openMedia">Span 3</span>.
@@ -154,28 +154,7 @@
 		}
 	}</script>
 	</span>
-		</p>
+	</p>
 		
-<!--
-		<span onclick="myFunction()">Try it</span>
-
-		<div id="myDIV">
-		This is my DIV element.
-		</div>
-
-		<p><b>Note:</b> The element will not take up any space when the display property set to "none".</p>
-
-		<script>
-		function myFunction() {
-		  var x = document.getElementById("myDIV");
-		  if (x.style.display === "none") {
-			x.style.display = "block";
-		  } else {
-			x.style.display = "none";
-		  }
-		}
-		</script>
--->
-
 </body>
 </html>
