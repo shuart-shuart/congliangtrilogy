@@ -8,3 +8,13 @@ Cong Liang Trilogy
 It is a:
   - WORKING CODE for hyperlinks, show and hide media
   - lacking <body>/<p> styling for the text
+  
+"working.html" is a WORKING CODE
+It has:
+  - a href and id
+  - styling properties
+  - p and id
+It is missing:
+  - span and id
+  - url for a
+  - media for span
