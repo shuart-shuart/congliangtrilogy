@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	body {
+		font-family: Courier New, Courier, sans-serif;
+		max-width: 95%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+/*hyperlinks style*/
+	.a {
+		transition: 0.3s;
+		text-decoration-line: underline;
+		text-decoration-style: dashed;
+		font-weight: 550;
+		background-color: pink;
+		color: pink;
+		}
+
+	a:link {
+		text-decoration-line: underline;
+		text-decoration-style: dashed;
+		font-weight: 550;
+		color: red;
+		target: "_blank";
+		}
+	
+	a:hover {
+		opacity: 0.7;
+		font-style: italic;
+		}
+	
+/* text style for opening media*/
+	.openMedia {
+		  cursor: crosshair;
+		  transition: 0.3s;
+		  text-decoration-line: underline;
+		  text-decoration-style: dashed;
+		  border-style: solid;
+		  border-color: black;
+		  font-weight: 550;
+		  background-color: pink;
+		  text-align: center;
+		  font-size: 40px;
+		  padding: 15pt;
+		  display: table;
+		  margin-left: auto;
+		  margin-right: auto;
+		  }
+
+	.openMedia:hover {
+		opacity: 0.7;
+		font-style: italic;
+		}
+
+/* style for div carrying media*/		
+	.myMedia {
+		display: none; /* Hidden by default */
+		padding: 10pt /*gap from text and other elements*/
+		width: 90vw; /* Full width */
+		height: 85vh; /* Full height */
+		margin-left: auto;
+		margin-right: auto;
+		}
+
+/* style for div content (media) */
+	.myMedia-content {
+		margin: auto;
+		display: block;
+		width: 90%;
+		max-width: 100%;
+		}
+
+
+/* Add Animation */
+		.myMedia-content, .myMedia-caption {  
+		  -webkit-animation-name: zoom;
+		  -webkit-animation-duration: 0.6s;
+		  animation-name: zoom;
+		  animation-duration: 0.6s;
+		}
+
+		@-webkit-keyframes zoom {
+		  from {-webkit-transform:scale(0)} 
+		  to {-webkit-transform:scale(1)}
+		}
+
+		@keyframes zoom {
+		  from {transform:scale(0)} 
+		  to {transform:scale(1)}
+		}
+
+		#button {
+			border-style: solid;
+			border-color: black;
+			max-width: 20%;
+			background-color: white;
+			text-align: center;
+			padding: 5pt;
+			display: table;
+			margin-left: auto;
+			margin-right: auto;
+			}
+	
+		.gif{
+		text-align: center;
+		margin: auto;
+		width: 95%;
+		background-color: red;
+		}
+		
+		#gif {
+		text-align: center;
+		padding: 15pt;
+		max-width: 95vw;
+		max-height: 85vh;
+		}
+	
+	}</style>
+</head>
+
+<title> Ah Jiao </title>
+    
+<body>
+	<div class="gif">
+	<img src="MEDIA/AhJiao.gif" id="gif">
+	</div>
+	
+	<span onclick="showTxt()" id="Span1" class="openMedia"> 仨兰 </span> <br>
+		<div id="Txt1" class="myMedia">
+			<p>
+			Ah Jiao was born in 1899, known to most as an incredibly capable majie, living up to the name of 
+			一脚踢 (one-kick wonder). She was a master of housekeeping and worked as a servant since she was 12. 
+			She became a <a href="http://eresources.nlb.gov.sg/infopedia/articles/SIP_2013-11-29_160454.html" target="_blank">majie</a> 
+			at 25, undergoing her sorhei (hair-combing) ceremony, where women fashioned 
+			their hair into a braid or bun and swore to celibacy and independence. Two years later, she left 
+			for Singapore with her lover, Shuang Shuang, another majie from her hometown, 
+			<a href="https://www.scmp.com/article/991704/sisters-shunde" target="_blank">Shunde</a>. Her years of 
+			service equipped her with culinary prowess and an extensive knowledge of home remedies and Traditional 
+			Chinese medication. Ah Jiao surrendered to the Japanese in an attempt to save Shuang Shuang when 
+			she was taken away, both women were killed sometime between 1944-45. She never got to gift Shuang Shuang 
+			the pair of <a href="https://www.mustsharenews.com/majie-couples-love" target="_blank">jade bangles</a> 
+			she bought and knotted together as a love token, the club kept this as tribute to her service. 	
+			</p><p>
+			Ah Jiao believed in people's good-naturedness, her childhood was simple and kind, just like the first 
+			household she served. As a staunch believer of Chinese customs and teachings, her values and principles 
+			were an important anchor for the club in the early days. However, her love was something the traditional 
+			Chinese values did not accept, Shuang Shuang was even 
+			<a href="https://www.youtube.com/watch?v=Qm3C_Efla9Y" target="_blank">punished</a> in a manner similar to 
+			<a href="https://www.youtube.com/watch?v=boHKjBZqBDw" target="_blank"> ducking stools </a>when found out. 
+			Her extensive knowledge helped a lot of women by alleviating their domestic load and providing 
+			affordable medical solutions. The recipes and tips in the book she contributed to continued to serve the club 
+			well into the days when they started a hospitality school. She sympathised greatly with the 
+			<a href="http://eresources.nlb.gov.sg/infopedia/articles/SIP_40_2005-01-24.html" target="_blank">Sook Ching Operation</a> 
+			victims, going as far to set up an obscured prayer hall to let their souls rest in peace.
+			</p> <br>
+				<div id= button>
+				<p><a href="https://shuart-shuart.github.io/congliangtrilogy/story_FULL.html" target="_blank"> Read More </a></p>
+				</div>
+		</div>
+			
+		<script>
+//summon Media1; show n hide
+	function showTxt() {
+		var x = document.getElementById("Txt1");
+		if (x.style.display === "block") {
+			x.style.display = "none";
+		} else {
+			x.style.display = "block";
+		}
+		
+	}</script>
+	<br>
+		
+</body>
+</html>
