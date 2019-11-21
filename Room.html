@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	body {
+		font-family: Courier New, Courier, sans-serif;
+		max-width: 95%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+/*hyperlinks style*/
+	.a {
+		transition: 0.3s;
+		text-decoration-line: underline;
+		text-decoration-style: dashed;
+		font-weight: 550;
+		background-color: pink;
+		color: pink;
+		}
+
+	a:link {
+		text-decoration-line: underline;
+		text-decoration-style: dashed;
+		font-weight: 550;
+		color: red;
+		target: "_blank";
+		}
+	
+	a:hover {
+		opacity: 0.7;
+		font-style: italic;
+		}
+	
+/* text style for opening media*/
+	.openMedia {
+		  cursor: crosshair;
+		  transition: 0.3s;
+		  text-decoration-line: underline;
+		  text-decoration-style: dashed;
+		  border-style: solid;
+		  border-color: black;
+		  font-weight: 550;
+		  background-color: pink;
+		  text-align: center;
+		  font-size: 40px;
+		  padding: 15pt;
+		  display: table;
+		  margin-left: auto;
+		  margin-right: auto;
+		  }
+
+	.openMedia:hover {
+		opacity: 0.7;
+		font-style: italic;
+		}
+
+/* style for div carrying media*/		
+	.myMedia {
+		display: none; /* Hidden by default */
+		padding: 10pt /*gap from text and other elements*/
+		width: 90vw; /* Full width */
+		height: 85vh; /* Full height */
+		margin-left: auto;
+		margin-right: auto;
+		}
+
+/* style for div content (media) */
+	.myMedia-content {
+		margin: auto;
+		display: block;
+		width: 90%;
+		max-width: 100%;
+		}
+
+
+/* Add Animation */
+		.myMedia-content, .myMedia-caption {  
+		  -webkit-animation-name: zoom;
+		  -webkit-animation-duration: 0.6s;
+		  animation-name: zoom;
+		  animation-duration: 0.6s;
+		}
+
+		@-webkit-keyframes zoom {
+		  from {-webkit-transform:scale(0)} 
+		  to {-webkit-transform:scale(1)}
+		}
+
+		@keyframes zoom {
+		  from {transform:scale(0)} 
+		  to {transform:scale(1)}
+		}
+
+		#button {
+			border-style: solid;
+			border-color: black;
+			max-width: 20%;
+			background-color: white;
+			text-align: center;
+			padding: 5pt;
+			display: table;
+			margin-left: auto;
+			margin-right: auto;
+			}
+	
+		.gif{
+		text-align: center;
+		margin: auto;
+		width: 95%;
+		}
+		
+		#gif {
+		text-align: center;
+		padding-top: 10pt;
+		padding-bottom: 5pt;
+		max-width: 95%;
+		max-height: 85vh;
+		}
+	
+	}</style>
+</head>
+
+<title> The Room </title>
+    
+<body>
+	<br>
+	<div class="gif">
+	<img src="MEDIA/Room.gif" id="gif">
+	</div>
+	
+	<span onclick="showTxt()" id="Span1" class="openMedia"> 仨兰 </span> <br>
+		<div id="Txt1" class="myMedia">
+			<p>
+			Founded in 1932, Cong Liang Club 从良会 is the brainchild of three Chinese women who created a 
+			<a href="https://mothership.sg/2018/01/secret-society-singapore/" target="_blank">secret society</a> 
+			with the mission to help and serve fellow women in Singapore. The club was active for over six decades, 
+			heavily involving themselves in political, educational and cultural activities. Pre-independence of 
+			Singapore, their remarkable achievements include contributions to the 
+			<a href="https://www.chinatownology.com/China_Relief_Fund.html" target="_blank">China War Relief fund</a>, 
+			resistance during the war and Japanese Occupation, education outreach. From the late 60s onwards, the 
+			club shifted its focus towards education, political issues while also working on providing 
+			<a href=" https://mothership.sg/2018/02/home-econs-compulsory/" target="_blank">female empowerment</a> 
+			and leisure. Other than supporting 
+			<a href="https://roots.sg/learn/stories/chinese-middle-schools-protests/story" target="_blank">student activism</a>, 
+			the club ran a weekend school for girls and later a hospitality school. The union-like activities 
+			helped many women adapt and transit as Singapore developed her tourism economy. Towards the end, 
+			the club helped provide pension and support for older members who were childless. 
+			</p><p>
+			It began in a room in the 
+			<a href="https://www.straitstimes.com/singapore/health/from-treating-sex-workers-to-maternity-hospital-history-of-kkh" target="_blank">Kandang Kerbau Hospital</a> 
+			(present-day KK Hospital), one of the free maternity hospital during the 1920s. 
+			Prostitute Ya Lan gave birth to her daughter and met nurse, Miao Chun. The duo 
+			met Ah Jiao and her lover when the two majie's sought refuge with Miao Chun. 
+			From its three founders, the club had 46 formal members and over 100 allies 
+			during its heydays. The club saw weakening involvement and membership due to 
+			the rise of community centres, new entertainment, and informational channel.  
+			Eventually, it folded along when the hospital complex relocated. Due to its 
+			female-centric demographic and leftist associations, the club is obfuscated 
+			by other female secret societies like the 
+			<a href="https://1819.sg/2018/01/red-butterfly-gang-singapore-secret-society/" target="_blank">Red Butterflies</a> 
+			in official accounts of history.
+			</p> <br>
+
+				<div id= button>
+				<p><a href="https://shuart-shuart.github.io/congliangtrilogy/story_FULL.html"> Read More </a></p>
+				</div>
+		</div>
+			
+		<script>
+//summon Media1; show n hide
+	function showTxt() {
+		var x = document.getElementById("Txt1");
+		if (x.style.display === "block") {
+			x.style.display = "none";
+		} else {
+			x.style.display = "block";
+		}
+		
+	}</script>
+	</span>
+	
+	</p>
+		
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	body {
+		font-family: Courier New, Courier, sans-serif;
+		max-width: 95%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+/*hyperlinks style*/
+	.a {
+		transition: 0.3s;
+		text-decoration-line: underline;
+		text-decoration-style: dashed;
+		font-weight: 550;
+		background-color: pink;
+		color: pink;
+		}
+
+	a:link {
+		text-decoration-line: underline;
+		text-decoration-style: dashed;
+		font-weight: 550;
+		color: red;
+		target: "_blank";
+		}
+	
+	a:hover {
+		opacity: 0.7;
+		font-style: italic;
+		}
+	
+/* text style for opening media*/
+	.openMedia {
+		  cursor: crosshair;
+		  transition: 0.3s;
+		  text-decoration-line: underline;
+		  text-decoration-style: dashed;
+		  border-style: solid;
+		  border-color: black;
+		  font-weight: 550;
+		  background-color: pink;
+		  text-align: center;
+		  font-size: 40px;
+		  padding: 15pt;
+		  display: table;
+		  margin-left: auto;
+		  margin-right: auto;
+		  }
+
+	.openMedia:hover {
+		opacity: 0.7;
+		font-style: italic;
+		}
+
+/* style for div carrying media*/		
+	.myMedia {
+		display: none; /* Hidden by default */
+		padding: 10pt /*gap from text and other elements*/
+		width: 90vw; /* Full width */
+		height: 85vh; /* Full height */
+		margin-left: auto;
+		margin-right: auto;
+		}
+
+/* style for div content (media) */
+	.myMedia-content {
+		margin: auto;
+		display: block;
+		width: 90%;
+		max-width: 100%;
+		}
+
+
+/* Add Animation */
+		.myMedia-content, .myMedia-caption {  
+		  -webkit-animation-name: zoom;
+		  -webkit-animation-duration: 0.6s;
+		  animation-name: zoom;
+		  animation-duration: 0.6s;
+		}
+
+		@-webkit-keyframes zoom {
+		  from {-webkit-transform:scale(0)} 
+		  to {-webkit-transform:scale(1)}
+		}
+
+		@keyframes zoom {
+		  from {transform:scale(0)} 
+		  to {transform:scale(1)}
+		}
+
+		#button {
+			border-style: solid;
+			border-color: black;
+			max-width: 20%;
+			background-color: white;
+			text-align: center;
+			padding: 5pt;
+			display: table;
+			margin-left: auto;
+			margin-right: auto;
+			}
+	
+		.gif{
+		text-align: center;
+		margin: auto;
+		width: 95%;
+		}
+		
+		#gif {
+		text-align: center;
+		padding-top: 10pt;
+		padding-bottom: 5pt;
+		max-width: 95%;
+		max-height: 85vh;
+		}
+	
+	}</style>
+</head>
+
+<title> Sook Ching Operations </title>
+    
+<body>
+	<div class="gif">
+	<img src="MEDIA/PrayerHall.gif" id="gif">
+	</div>
+	
+	<span onclick="showTxt()" id="Span1" class="openMedia"> 仨兰 </span> <br>
+		<div id="Txt1" class="myMedia">
+			<p>
+			Many Chinese were killed during the Japanese Occupation due to the 
+			<a href="https://www.channelnewsasia.com/news/singapore/grave-bones-world-war-ii-victims-singapore-sook-ching-10089202" target="_blank">Sook Ching Operation</a> 
+			and the Kempeitai's massacre of anyone allegedly anti-Japanese. 
+			The mass killings were <a href="https://roots.sg/learn/collections/listing/1019517" target="_blank">horrifying</a>
+			and Ah Jiao greatly empathized with those who sacrificed, as it was impossible 
+			to pick up the corpses, Ah Jiao set up an obscured prayer hall instead. 
+			The site of prayers and resting place was at Mount Faber, which was close to 
+			<a href="https://remembersingapore.org/blakang-mati-artillery-barrack/" target="_blank">Sentosa</a>, 
+			one of the larger killing sites. Concurrently, the prayer hall served as a point 
+			of information dispersal during this period of White Terror. Other than Shuang Shuang's 
+			help, Ah Jiao was aided by Ah Geok. Ah Geok and many other 
+			<a href="https://lionraw.com/2015/08/18/the-samsui-women-of-singapore/" target="_blank">Samsui Women</a> 
+			served on the 
+			<a href="https://eresources.nlb.gov.sg/infopedia/articles/SIP_765_2005-02-01.html" target="_blank">Dalforce</a>, 
+			and they were angered and afflicted by the Japanese purging their commanderies. 
+			Ah Geok continued to run the prayer hall continued even after the other two lady's capture.
+			</p> <br>
+
+				<div id= button>
+				<p><a href="https://shuart-shuart.github.io/congliangtrilogy/story_FULL.html" target="_blank"> Read More </a></p>
+				</div>
+		</div>
+			
+		<script>
+//summon Media1; show n hide
+	function showTxt() {
+		var x = document.getElementById("Txt1");
+		if (x.style.display === "block") {
+			x.style.display = "none";
+		} else {
+			x.style.display = "block";
+		}
+		
+	}</script>
+	</span>
+	
+	</p>
+		
+</body>
+</html>
